@@ -196,7 +196,7 @@ var OrdersControllerModule = (function () {
             buttonDelete.innerText = "Delete";
             buttonDelete.id = "buttonDelete" + i;
             buttonDelete.onclick = function (ev) {
-                OrdersControllerModule.deleteOrderItem(ev.path[2].id);
+                OrdersControllerModule.deleteOrderItem(ev.currentTarget.parentNode.parentNode.id);
             };
             col.appendChild(buttonDelete);
             row.appendChild(col);
